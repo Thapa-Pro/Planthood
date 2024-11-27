@@ -1,0 +1,1019 @@
+/* DEFAULT SETTINGS */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* COLORS */
+:root {
+    --primary-bg-color: #0A846E;
+    --secondary-bg-color: #9e6d52;
+    --body-bg-color: #FCF6FC;
+    --footer-bg-color: #9E6D52;
+
+    --btn-color:#B93857;
+    --hover-green-btn: #065e4e;
+    --hover-red-btn: #932d45;
+
+    --primary-text-color: #055647;
+
+/* FONT-FAMILY */ 
+    --primary-font-fam: "Maven Pro";  
+    --secondary-font-fam: "Open Sans"; 
+    --title-card-font-fam: "Lato";
+}
+
+/* FONTS */
+/* MAVEN PRO */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* OPENS SANS */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* LATO */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* PAGE CONTENT */
+body {
+    background-color: var(--body-bg-color);
+    line-height: 1.25rem; 
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER SECTION */
+.hero {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(00px, 1fr));
+    grid-template-rows: 2, 1fr;
+}
+
+/* LEFT HERO CONTAINER */
+.hero-big-img {
+    max-width: 100%;
+    grid-column: 1;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1615671524701-9c3dde8fdaa0?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.hero-big-img-heart {
+    padding-top: 5rem;
+}
+
+/* RIGHT TOP HERO CONTAINER */
+.hero-small-brown {
+    max-width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-bg-color);
+}
+
+/* RIGHT BOTTOM HERO CONTAINER */
+.hero-small-green {
+    max-width:100%;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    background-color: var(--primary-bg-color);
+}
+
+/* NAV SECTION */
+li {
+    width:250px;
+    padding: 1rem 0;
+    text-align: center;
+
+    a {
+        color: var(--primary-text-color);
+    }
+}
+
+li:hover {
+    background-color: var(--primary-bg-color);
+    
+    a {
+        color: white;
+    }
+}
+
+.navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #fff;
+    font-size: 1.25rem;
+    font-family: "Maven pro";
+    font-weight: 500;
+    color: var(--primary-text-color);
+    list-style-type: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* NAV-BOX SHADOW - TO SHOW THE BOX SHADOW OF THE NAV BAR SO IT CAN APPEAR ABOVE MAIN SECTION */
+.navigation {
+    z-index: 1;
+    position: relative; 
+}
+
+/* MAIN SECTION */
+.planer-main {
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-family: "Maven pro";
+    font-weight: 500;
+    color: var(--primary-bg-color);
+}
+
+/* PLANNED TIPS SECTION */
+.info-text-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.season-circle {
+    padding: 3rem 0rem 2rem 0rem;
+    flex: 1;
+}
+
+.circle-section-img {
+    width: 85%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+}
+
+.planned-section-img-icon {
+    aspect-ratio: 1;
+}
+
+.season-article {
+    margin-top: 20%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: "Open sans";
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .season-article p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .tips-btn {
+        width: 35%;
+        padding: 1rem 2rem;
+        background-color: var(--primary-bg-color);
+        align-self: flex-end;
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* HORISONTELLA SKILJELINJE */
+hr {
+    width: 33%;
+    margin: 2rem 0;
+    border: 1px solid var(--primary-text-color);
+}
+
+/* PLANT GALLERY SECTION */
+.plant-gallery-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    h2 {
+        font-size: 2rem;
+        font-family: var(--title-card-font-fam);
+        font-weight: 600;
+    }
+
+    .gallery-show-more-btn {
+        width: fit-content;
+        padding: .8rem 1.5rem;
+        background-color: var(--primary-bg-color);
+        font-size: 1.5rem;
+        font-family: var(--secondary-font-fam);
+        font-weight: 600;
+        color: white;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.gallery-card-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    column-gap: 1.7rem;
+    row-gap: 1.5rem;
+}
+
+.seed-cards {
+    grid-column: span 1;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-image {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    img {
+        aspect-ratio: 1;
+    }
+}
+
+.card-image-gurka {
+    background-image: url("https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-tomat-big {
+    background-image: url("https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-tomat-small {
+    background-image: url("https://images.unsplash.com/photo-1565698228480-eec300c9679b?q=80&w=2806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-peas {
+    background-image: url("https://images.unsplash.com/photo-1687878269804-63e8b50e3ddc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-majrova {
+    background-image: url("https://images.unsplash.com/photo-1555447740-03e40562af94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-image-squash {
+    background-image: url("https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.card-info {
+    padding: 1.3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+
+    h2 {
+        font-size: 1.5rem;
+        font-family: var(--title-card-font-fam);
+        font-weight: 600;
+    }
+
+    h3 {
+        justify-self: end;
+        font-size: 1rem;
+        font-family: var(--secondary-font-fam);
+        font-weight: 700;
+    }
+
+    p {
+        align-self: center;
+        font-size: 1rem;
+        font-family: var(--title-card-font-fam);
+        font-weight: 300;
+    }
+
+    button {
+        width: fit-content;
+        height: 2rem;
+        padding: 0 1rem;
+        justify-self: end;
+        background-color: var(--btn-color);
+        font-size: 1rem;
+        font-family: var(--secondary-font-fam);
+        font-weight: 700;
+        color: white;
+        border: none;
+        border-radius: 9px;
+    }
+
+    .bin-btn {
+        display: none;
+    }
+}
+
+
+/* PLANTERADE PLANTOR SECTION */
+
+.planterade-season-article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: "Open sans";
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .planterade-plantor-btn {
+        width: fit-content;
+        padding: 1rem 2rem;
+        align-self: flex-start;
+        background-color: var(--primary-bg-color);
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.planterade-season-img {
+    display: flex;
+    justify-content: flex-end;
+} 
+
+
+/* FOOTER */
+.planer-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    h2 {
+        margin: 1.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: var(--secondary-font-fam);
+        font-weight: 400;
+        color: var(--primary-text-color);
+    }
+}
+
+
+.contact-section {
+    aspect-ratio: 2/1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-image: url("https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-contact {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.title-footer-contact {
+    z-index: 3;
+    position: absolute;
+    align-self: center;
+    margin-top: 50%;
+    font-size: 4rem;
+    font-family: var(--primary-font-fam);
+    font-weight: 500;
+}
+
+.contact-info {
+    z-index: 4;
+    justify-self: flex-end;
+    width: 100%;
+    padding:0 1.5rem 2rem 1.5rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-family: var(--primary-font-fam);
+    font-weight: 400;
+}
+
+.mail {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background-opacity {
+    z-index: 1;
+    position: absolute;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.footer-heart {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 13%;
+}
+
+/* MINA SIDOR PAGE */
+.wrapper-mina-sidor { 
+    max-width: 1000px; 
+    margin: 0 auto;
+    background-color: white;
+}
+  
+/* HEADER SECTION */
+.header-mina-sidor { 
+    aspect-ratio: 5/2;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    background-image: url(../assets/reaching.png); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    .hamburger-menu-mina-sidor {
+        display: none;
+    }
+   
+    img { 
+        width: 190px; 
+        height: 186px; 
+    } 
+    
+    h2 { 
+        font-size: 40px; 
+        font-family: var(--primary-font-fam); 
+        font-weight: 500; 
+        color: #ffffff; 
+    } 
+    
+} 
+
+/* MAIN SECTION */
+.mina-sidor-main {
+    padding: 3.5rem 2rem 6rem 2rem;
+}
+
+/* ADD PLANT SECTION */
+.add-plant { 
+    width: 100%;
+    padding: 3rem 0; 
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;     
+} 
+
+.title-add-plant { 
+    font-size: 2rem; 
+    font-family: var(--secondary-font-fam); 
+    font-weight: 400; 
+    color: #000000; 
+    line-height: 2.5rem; 
+}
+
+.add-plant-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    border: none;
+
+}
+
+.input-planta, .input-datum {
+    flex: 1;
+}
+
+.input-planta-box {
+    width: 100%;
+    height: 3rem; 
+    padding: 1rem;
+    margin:0;
+    border: none;
+    font-size: 1.3rem;
+    font-family: var(--primary-font-fam);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-planta-box:focus {
+    color: black; 
+    border: 2px solid var(--primary-bg-color);
+    outline: none;
+}
+
+.input-planta, .input-datum {
+    font-size: 1.25rem;
+    font-family: var(--secondary-font-fam);
+    font-weight: 400;
+}
+
+/* BUTTON ELEMENT */ 
+.submit-button {
+    align-self: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-bg-color);     
+    font-size: 1.5rem;
+    font-family: var(--secondary-font-fam); 
+    font-weight: 700;
+    color: #ffffff;
+    border: none; 
+    border-radius: 9px; 
+} 
+    
+/* PLANT GALLERY - MINA SIDOR */
+.plant-gallery-mina-sidor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4, 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+
+    h2 {
+        font-size: 2rem;
+        font-family: var(--title-card-font-fam);
+        font-weight: 600;
+    }
+
+    .head-title-gallery-mina-sidor {
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    .card-gurka-1 {
+        grid-column: span 1;
+        grid-row: 2;
+    }
+
+    .sub-title-gallery-mina-sidor {
+        margin-top: 2rem;
+        grid-column: span 3;
+        grid-row: 3;
+        text-align: center;
+    }
+
+    .card-gurka-2 {
+        grid-column: span 1;
+        grid-row: 4;
+    }
+
+    .card-gurka-3 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+}
+
+.mina-sidor-footer {
+    padding: 2rem;
+    background-color: var(--footer-bg-color); 
+}
+
+.footer-gallery-section { 
+    width: 100%;
+    height: 280px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+} 
+
+.footer-images-1 {
+    width: 100%;
+    background-image: url("https://plus.unsplash.com/premium_photo-1678344170545-c3edef92a16e?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; /* MAKES SO THE IMAGE COVER ALL AREAS */
+    background-position: center; /* CENTER THE IMAGE IN THE CONTAINER */
+    background-repeat: no-repeat; /* TAKE AWAY THE IMAGE REPEAT */
+}
+
+.footer-images-2 {
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-images-3 {
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-images-4 {
+    width: 100%;
+    background-image: url("https://plus.unsplash.com/premium_photo-1681398651047-78491e34f66a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.to-top-mina-sidor {
+    padding: 2rem 0;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font-fam);
+    font-weight: 400;
+    color: black;
+}
+
+/* BUTTON HOVER */
+.green-btn:hover {
+    background-color: var(--hover-green-btn);
+    cursor: pointer;
+}
+
+.red-btn:hover {
+    background-color: var(--hover-red-btn);
+    cursor: pointer;
+
+}
+
+/* MEDIA QUERIES EFFECT */
+/* ADAPTING TO MOBILE AND SMALLER DEVICES */
+@media screen and (max-width: 600px) {
+
+/* LANDING PAGE - PLANER */
+/* HEADER SECTION - PLANER PAGE */
+.wrapper {
+    width: 100%;   
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    .hero-big-img {
+        grid-column: 1 / 3;
+        height: 390px; 
+    }
+
+    .hero-small-brown {
+        grid-column: 1;
+        grid-row: 3;
+        height: 195px;
+    }
+
+    .hero-small-green {
+        grid-column: 2;
+        grid-row: 3;
+        height: 195px;
+    } 
+
+    img {
+        width: 80%;
+        height: auto;
+    }
+    
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .hero-small-brown, .hero-small-green {
+        width: 100%;
+        height: 195px;
+    }
+}
+
+.navigation {
+    display: none;
+}
+
+/* MAIN SECTION - PLANER PAGE*/
+.main-title {
+    font-size: 24px;
+}
+
+/* TWO SECTION CLASSES HAVE THE SAME LAYOUT FOR DESKTOP, SO THEY CAN EVEN SHARE THE SAME CSS LAYOUT FOR MOBILE AS WELL*/
+.planer-main { 
+    padding: 2.25rem 1rem;
+    gap: 1rem;
+}
+
+.info-text-section {
+    flex-direction: column-reverse;
+
+    .season-article, .planterade-plantor-article {
+        padding: 0rem 0 2rem 0;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .tips-btn, .planterade-plantor-btn {
+        align-self: center;
+        width: fit-content;
+        font-size: 16px;
+    }
+
+    .season-circle {
+        width: 100%;
+        padding: 0; /* RESET PADDING FROM BEFORE */
+        display: flex;
+        justify-content: center;
+    }
+
+    .planned-section-img-icon {
+        aspect-ratio: 8/7;
+    }
+}
+
+hr {
+    width: 50%;
+    border: 3px solid var(--primary-text-color);
+}
+
+/* PLANT GALLERY SECTION - PLANER PAGE */
+.plant-gallery-section {
+    gap: 2rem;
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+.gallery-card-section {
+    grid-template-columns: repeat(auto-fit, minmax(179px, 1fr));
+    gap: 1rem;
+
+    img {
+        aspect-ratio: 6/4;
+    }      
+}
+
+.card-info {
+    padding: .5rem 0.6rem;
+    gap: .5rem;
+
+    button {
+        display: none;
+    }
+
+    h2 {
+        font-size: .9rem;
+    }
+
+    h3 {
+        font-size: .8rem;
+    }
+
+    p {
+        font-size: .7rem;
+    }
+
+    .bin-btn {
+        display: block;
+        width: 22%;
+        height: 100%;
+        margin-right: .3rem; 
+        justify-self: end;
+        align-self: center;
+    }
+
+    .bin-btn-container {
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/bin.png);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+}
+
+.plant-gallery-section {
+    .gallery-show-more-btn {
+        font-size: 1rem;
+    }
+}
+
+/* PLANTERADE PLANTOR INFO SECTION - PLANER PAGE */
+.planterade-section-img {
+    width: 70%;
+    margin: 2rem 0;
+    }
+
+    img {
+        aspect-ratio: 9/8;
+    }
+
+.planterade-season-article {
+    .planterade-plantor-btn {
+        padding: .8rem 1rem;
+        font-weight: 700;
+    }
+}
+
+
+/* FOOTER SECTION - PLANER PAGE */
+
+.contact-section {
+    aspect-ratio: 1 / 2;
+    flex-direction: column-reverse;
+}
+
+.title-footer-contact {
+    margin-top: 45%;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact-info {
+    h3 {
+        align-self: center;
+        font-size: .75rem;
+    }
+}
+
+.planer-footer {
+    h2 {
+        font-size: .75rem;
+        font-weight: 400;
+        color: black;
+    }
+}
+
+
+/* PAGE - MINA SIDOR */
+/* NAVIGATION SECTION - MINA SIDOR */
+.navigation-mina-sidor {
+    display: none;
+}
+
+/* HEADER SECTION - MINA SIDOR */
+.header-mina-sidor {
+    aspect-ratio: 1;
+    background-image: url(../assets/reaching-full-size.jpg);
+ 
+    .hamburger-menu-mina-sidor {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+    }
+}
+
+/* MAIN SECTION - MINA SIDOR */
+.mina-sidor-main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 2rem 1rem;
+    gap: 3rem;
+}
+
+/* ADD PLANT SECTION - MINA SIDOR*/
+.title-add-plant {
+    text-align: center;
+}
+
+.add-plant {
+    padding: 0;
+    gap: 1rem;
+}
+.add-plant-inputs {
+    flex-direction: column;
+    gap: .7rem;
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+.submit-button {
+    padding: .5rem .9rem;
+    font-size: 1rem;
+}
+
+/* PLANT GALLERY SECTION - MINA SIDOR */
+.plant-gallery-mina-sidor {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 1rem;
+
+    .head-title-gallery-mina-sidor, .sub-title-gallery-mina-sidor{
+        font-size: 1rem;
+    }
+
+    img {
+        display: none;
+    }
+
+    .card-gurka-1 {
+        margin-right: .5rem;
+    }
+
+    .card-gurka-2 {
+        margin-right: .5rem;
+    }
+
+    .card-gurka-3 {
+        margin-left: .5rem;
+    }
+}
+
+.mina-sidor-footer {
+    padding: 1rem;
+}
+
+/* FOOTER SECTION - MINA SIDOR */
+.footer-gallery-section {
+    height: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(183px, 1fr));
+    gap: .6rem;
+}
+
+/* SCROLL TO TOP SECTION - MINA SIDOR */
+.to-top-mina-sidor {
+    padding: 1rem 0;
+    font-size: .9rem;
+}
+}   
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Mina sidor</title>
+</head>
+<body>
+    <div class="wrapper-mina-sidor">
+
+        <!--NAVIGATION SECTION -->
+        <nav class="navigation-mina-sidor">
+            <ul class="navigation-list">
+                <li><a href="index.html">PLANER</a></li>
+                <li><a href="">HISTORIK</a></li>
+                <li><a href="">TIPS</a></li>
+                <li><a href="index.html">LOGGA UT</a></li>
+            </ul>
+        </nav>
+        
+        <!-- HEADER SECTION -->
+        <header class="header-mina-sidor" id="top-mina-sidor">
+            <img src="assets/plannedplanthoodlogo.svg" alt="heart.logo">
+            <h2>Mina Sidor</h2>
+            <figure class="hamburger-menu-mina-sidor">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            </figure>
+        </header>
+
+        <!-- MAIN SECTION -->
+        <main class="mina-sidor-main">
+
+            <!-- ADD PLANT SECTION -->
+            <section class="add-plant">
+                <h3 class="title-add-plant">Lägg till ny plantering:</h3>
+                <fieldset class="add-plant-inputs">
+                    <label class="input-planta">
+                        Planta:
+                        <input type="text" id="planta" class="input-planta-box" placeholder="Exempel på planta: Gurka">
+                    </label>
+                    <label class="input-datum">
+                        Datum:
+                        <input type="date" id="datum" name="Datum:"
+                        class="input-planta-box">
+                    </label>
+                </fieldset>
+                <button type="submit" class="submit-button green-btn">LÄGG TILL</button>
+            </section>
+
+            <!-- PLANT GALLERY SECTION -->
+            <section class="plant-gallery-mina-sidor">
+                <h2 class="head-title-gallery-mina-sidor">Dina planerade planteringar:</h2>
+                    <article class="card-gurka-1 seed-cards">
+                        <figure class="card-image card-image-gurka">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Gurka</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Rico Coolio</p>
+                            <button type="submit" class="red-btn">TA BORT</button>
+                            <figure class="bin-btn-container">
+                            </figure>
+                        </section>
+                    </article>
+
+                <h2 class="sub-title-gallery-mina-sidor">Dina planterade planteringar:</h2>
+
+                    <article class="card-gurka-2 seed-cards">
+                        <figure class="card-image card-image-gurka">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Gurka</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Rico Coolio</p>
+                            <button type="submit" class="red-btn">TA BORT</button>
+                            <figure class="bin-btn-container">
+                            </figure>
+                        </section>
+                    </article>
+
+                    <article class="card-gurka-3 seed-cards">
+                        <figure class="card-image card-image-gurka">
+                            <img src="assets/plant.svg" alt="Image of a plant">
+                        </figure>
+                        <section class="card-info">
+                            <h2>Gurka</h2>
+                            <h3>15 april 2024</h3>
+                            <p>Rico Coolio</p>
+                            <button type="submit" class="red-btn">TA BORT</button>
+                            <figure class="bin-btn-container">
+                            </figure>
+                        </section>
+                    </article>
+            </section>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer class="mina-sidor-footer">
+            <section class="footer-gallery-section">
+                <article class="footer-img footer-images-1"></article>
+                <article class="footer-img footer-images-2"></article>
+                <article class="footer-img footer-images-3"></article>
+                <article class="footer-img footer-images-4"></article>
+            </section>
+        </footer>
+
+        <!-- SCROLL TO TOP -->
+        <a href="#top-mina-sidor"><h2 class="to-top-mina-sidor">Till toppen av sidan</h2></a>
+
+    </div>
+</body>
+</html>
